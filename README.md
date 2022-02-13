@@ -49,6 +49,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Typescript](https://www.typescriptlang.org/) - JS "superset"
+- [Sass](https://sass-lang.com/) - CSS extension
 - [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
