@@ -56,7 +56,8 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I wanted to learn as much as possible with these kinds of project so I use a lot of unecessary technologies,
+like Next.js, Typescript, Tailwind and Sass.
 
 To see how you can add code snippets, see below:
 
@@ -73,10 +74,6 @@ const proudOfThisFunc = () => {
   console.log('🎉')
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 

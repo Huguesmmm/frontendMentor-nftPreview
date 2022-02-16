@@ -1,6 +1,22 @@
-@use '../util/' as *;
+@use '../util/'as *;
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 // font-family
-$font-outfit: 'Outfit', sans-serif;
+$font-outfit: 'Outfit',
+sans-serif;
 
+.card {
+    .card-h1 {
+        font-family: $font-outfit;
+        font-weight: 600;
+        font-size: 25px;
+        color: white;
+    }
+
+    .card-p{
+        font-family: $font-outfit;
+        font-weight: 300;
+        font-size: 20.5px;
+        color: $softBlue;
+    }
+}
