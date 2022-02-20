@@ -1,6 +1,6 @@
-@use '../util/' as *;
+@use '../util/'as *;
 
-html{
+html {
     box-sizing: border-box;
 }
 
@@ -13,11 +13,38 @@ body {
 }
 
 .card {
-   background-color: $veryDarkBlue2;
+    background-color: $veryDarkBlue2;
 
-   .card-h1{
-       padding: 15px 0;
-   }
+    .card-h1 {
+        margin: 15px 0;
+    }
+
+    .card-info {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+
+        img{
+            float: left;
+            // width: 13px;
+        }
+        .card-info-bitcoin {
+            display: flex;
+            align-items: center;
+
+            p{
+                margin-left: 10px;
+            }
+        }
+        .card-info-time {
+            display: flex;
+            align-items: center;
+
+            p{
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 .card:hover,
