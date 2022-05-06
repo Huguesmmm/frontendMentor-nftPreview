@@ -3,7 +3,7 @@ const path = require('path');
 const nextConfig = {
   images: {
     loader: 'akamai',
-    path: '',
+    path: '/',
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
