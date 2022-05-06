@@ -8,6 +8,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   },
+  basePath: '/frontendMentor-nftPreview',
+  assetPrefix: '/frontendMentor-nftPreview',
 }
 
 module.exports = nextConfig
