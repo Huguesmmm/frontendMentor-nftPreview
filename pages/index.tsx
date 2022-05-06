@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <div className='img-nft'>
           <Image src={`${imgPrefix}/images/image-equilibrium.jpg`} alt="Equilibrium" height={1000} width={1000} className='image' />
           <div className='img-nft-hover'>
-            <img src="/icons/icon-view.svg" alt="eye"/>
+            <img src={`${imgPrefix}/icons/icon-view.svg`} alt="eye"/>
           </div>
         </div>
         <div className='card-h1'>Equilibrium #3429</div>
