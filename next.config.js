@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
-const optimizedImages = require('next-optimized-images');
 const path = require('path');
 const nextConfig = {
-  reactStrictMode: true,
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   },
