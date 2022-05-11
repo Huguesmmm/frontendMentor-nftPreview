@@ -11,32 +11,14 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
 ### The challenge
 
 Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
-
-### Screenshot
-
-![](./screenshot.jpg)
-
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
 ## My process
 
 ### Built with
@@ -56,48 +38,96 @@ Users should be able to:
 
 ### What I learned
 
-I wanted to learn as much as possible with these kinds of project so I use a lot of unecessary technologies,
+I wanted to learn as much as possible with these kinds of project so I use a lot of unecessary technologies for this type of project,
 like Next.js, Typescript, Tailwind and Sass.
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+- Nesting with SCSS ("&" equals ".card" in this position)
+```scss
+.card{
+  background: $veryDarkBlue1;
+  &:hover{
+    background: $cyan;
+  }
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+- Using gap with flexbox
+```scss
+&-creator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
 }
 ```
+- Creating the hover effect with the eye (see boilerplate.scss)
+- Using Git Pages for deployment
+  1. Using the dependency gh-pages in package.json
+    ```json
+      "dependencies": {
+        "gh-pages": "^3.2.3",
+      }
+    ```
+  2. Using a different images loader than the default in next.config.js
+    ```js
+      const nextConfig = {
+        images: {
+          loader: 'akamai',
+          path: '/',
+        }
+      }
+    ```
+  3. Use next export to create a out folder
+    ```json
+      "scripts": {
+        "export": next export,
+      }
+    ```
+  4. Use gh-pages to deploy using a github bot
+    ```json
+      "scripts": {
+        "predeploy": "npm run build && npm run export",
+        "deploy": "gh-pages -d out",
+      }
+    ```
+  5. You can also create a github action that automate the deployment on github pages on each modification of the main
+  ```yml
+    name: Node.js CI
 
-### Continued development
+    on:
+      push:
+        branches: [ main ]
+      pull_request:
+        branches: [ main ]
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+    jobs:
+      build:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+        runs-on: ubuntu-latest
 
-### Useful resources
+        strategy:
+          matrix:
+            node-version: [16.x]
+            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+        steps:
+        - uses: actions/checkout@v3
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v3
+          with:
+            node-version: ${{ matrix.node-version }}
+            cache: 'npm'
+        - run: npm ci
+        - run: npm run build
+        - run: npm run export
+        - run: touch ./out/.nojekyll
+        
+        - name: Deploy 🚀
+          uses: JamesIves/github-pages-deploy-action@v4.3.3
+          with:
+            branch: gh-pages # The branch the action should deploy to.
+            folder: out # The folder the action should deploy.
+  ```
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
