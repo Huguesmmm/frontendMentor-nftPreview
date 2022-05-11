@@ -22,6 +22,11 @@ const Home: NextPage = () => {
           <div className='card-info-bitcoin'><img src={`${imgPrefix}/icons/icon-ethereum.svg`} alt="eth" /><p> 0.041 ETH</p></div>
           <div className='card-info-time'><img src={`${imgPrefix}/icons/icon-clock.svg`} alt="eth" /><p>3 days left</p></div>
         </div>
+        <hr className='hr1'></hr>
+        <div className='card-creator'>
+          <div className='card-creator-picture'><img src={`${imgPrefix}/images/image-avatar.png`} alt='avatar'></img></div>
+          <div className='card-creator-createdby'>Creation of <span className='card-creator-createdby-name'>Jules Wyvern</span></div>
+        </div>
       </div>
     </div>
   )

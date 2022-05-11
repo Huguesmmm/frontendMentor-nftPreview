@@ -8,7 +8,7 @@ sans-serif;
 .card {
     font-family: $font-outfit;
 
-    .card-h1 {
+    &-h1 {
         font-weight: 600;
         font-size: 25px;
         color: white;
@@ -18,23 +18,35 @@ sans-serif;
         }
     }
 
-    .card-p{
+    &-p{
         font-weight: 300;
-        font-size: 20.5px;
+        font-size: 21px;
         color: $softBlue;
     }
 
-    .card-info {
-        .card-info-bitcoin{
+    &-info {
+        &-bitcoin{
             &, p{
                 font-weight: 600;
                 font-size: 18px;
                 color: $cyan;
             }
         }
-        .card-info-time{
+        &-time{
             font-weight: 300;
             color: $softBlue;
         }
+    }
+
+    &-creator {
+         &-createdby {
+             color: $softBlue;
+             font-weight: 300;
+             font-size: 18px;
+             &-name:hover{
+                color: $cyan;
+                cursor: pointer;
+             }
+         }
     }
 }
