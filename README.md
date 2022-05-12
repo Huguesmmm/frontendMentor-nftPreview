@@ -2,6 +2,10 @@
 
 This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+## Preview
+> :bulb:**[Git Pages of the Project](https://huguesmmm.github.io/frontendMentor-nftPreview/)**
+[<img src="public/images/readmePreview.png"/>](https://huguesmmm.github.io/frontendMentor-nftPreview/)
+
 ## Table of contents
 
 - [Overview](#overview)
