@@ -1,0 +1,77 @@
+@use '../util/' as *;
+
+
+
+// Devices screen sizes
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$largeDesktop: 1440px;
+
+
+// View the optimal layout depending on their device's screen size
+@mixin mobile {
+    @media (max-width: $mobile) {
+        // make the card smaller
+        .card {
+            width: 100%;
+            height: 100%;
+        }
+        // make the image smaller
+        .img-nft {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        // make the card a little bigger
+        .card {
+            width: 100%;
+            height: 100%;
+        }
+        // make the image a little bigger
+        .img-nft {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@mixin desktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin largeDesktop {
+    @media (max-width: $largeDesktop) {
+        @content;
+    }
+}
+
+@mixin mobileAndTablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin tabletAndDesktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin desktopAndLargeDesktop {
+    @media (max-width: $largeDesktop) {
+        @content;
+    }
+}
+
+@mixin mobileAndTabletAndDesktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
